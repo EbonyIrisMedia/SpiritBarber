@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spirit Barber – Elevate Your Grooming Experience</title>
+  <!-- Google Fonts for clean, modern typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons used in service cards and VIP benefits -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-3YLccZMZnbe6SyT+yQUwpsOSJyYwcmBHQYaWV7k/akdUSHcauDquynjUTduVdJN9WewtG/XAIN5DTVIR0btIbg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Primary site header with navigation -->
+  <header>
+    <nav class="container">
+      <div class="logo"><a href="#">Spirit&nbsp;Barber</a></div>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#history">Our Story</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Find&nbsp;Us</a></li>
+        <li><a href="#vip" class="btn btn-primary">Book&nbsp;Now</a></li>
+      </ul>
+      <div class="hamburger" aria-label="Menu" aria-controls="navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main content wrapper -->
+  <main>
+    <!-- Hero slider showcasing multiple headlines -->
+    <section class="hero">
+      <div class="slides">
+        <div class="slide active" style="background-image: url('https://source.unsplash.com/1600x900/?barber,haircut');">
+          <div class="overlay"></div>
+          <div class="hero-content container">
+            <h1>Elevate Your Grooming Experience</h1>
+            <p>Where the art of grooming meets the charm of a speakeasy.</p>
+            <a href="#vip" class="btn btn-primary">Book Your Experience</a>
+          </div>
+        </div>
+        <div class="slide" style="background-image: url('https://source.unsplash.com/1600x900/?barbershop,classic');">
+          <div class="overlay"></div>
+          <div class="hero-content container">
+            <h1>Precision Cuts &amp; Timeless Styles</h1>
+            <p>Discover your personal look with our talented barbers.</p>
+            <a href="#services" class="btn btn-primary">View Services</a>
+          </div>
+        </div>
+        <div class="slide" style="background-image: url('https://source.unsplash.com/1600x900/?speakeasy,club');">
+          <div class="overlay"></div>
+          <div class="hero-content container">
+            <h1>A Speakeasy Vibe for the Modern Gentleman</h1>
+            <p>Relax with our signature ambience and curated spirits.</p>
+            <a href="#gallery" class="btn btn-primary">See Our Gallery</a>
+          </div>
+        </div>
+        <!-- Video slide showcasing ambience. Replace the src attribute with your own video. -->
+        <div class="slide video-slide">
+          <!-- Removed poster attribute to eliminate dependency on local placeholder image -->
+          <video class="hero-video" autoplay muted loop playsinline>
+            <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="overlay"></div>
+          <div class="hero-content container">
+            <h1>Experience the Art of Grooming</h1>
+            <p>Step into our underground barbershop where tradition meets modern sophistication.</p>
+            <a href="#booking" class="btn btn-primary">Schedule Now</a>
+          </div>
+        </div>
+      </div>
+      <!-- Slider controls -->
+      <button class="slider-btn prev" aria-label="Previous slide">&#8249;</button>
+      <button class="slider-btn next" aria-label="Next slide">&#8250;</button>
+      <div class="dots" aria-label="Slide indicators"></div>
+    </section>
+
+    <!-- Services section -->
+    <section id="services" class="services section-padding">
+      <div class="service container">
+        <div class="service-text">
+          <h2>Haircuts</h2>
+          <p>At Spirit Barber, we aim to elevate your grooming experience. Our mission is to provide top‑notch haircuts and head shaves that not only enhance your look but boost your confidence. We prioritise your satisfaction and strive to create a memorable visit every time.</p>
+          <p>From the moment you walk in, you’ll feel the spirit of our shop. Expert barbers, relaxing vibes and a commitment to your satisfaction define what we do. Trust us to help you look and feel your best.</p>
+        </div>
+        <div class="service-image">
+          <img src="https://source.unsplash.com/600x600/?barber-chair" alt="Haircut service">
+        </div>
+      </div>
+    </section>
+
+    <!-- The Craft: detailed service offerings -->
+    <section id="craft" class="craft section-padding">
+      <div class="container">
+        <h2>The Craft</h2>
+        <p>Experience traditional barbering elevated to an art form. Each service is crafted with precision, passion and 27 years of expertise.</p>
+        <div class="craft-cards">
+          <div class="craft-card">
+            <div class="craft-icon"><i class="fa-solid fa-scissors"></i></div>
+            <h3>Classic Cuts</h3>
+            <ul>
+              <li>Consultation</li>
+              <li>Precision Cut</li>
+              <li>Style Finish</li>
+            </ul>
+            <p class="price">Starting at $35</p>
+            <a href="#booking" class="btn btn-primary">Book Now</a>
+          </div>
+          <div class="craft-card">
+            <div class="craft-icon"><i class="fa-solid fa-user"></i></div>
+            <h3>Head Shaves</h3>
+            <ul>
+              <li>Hot Towel</li>
+              <li>Precision Shave</li>
+              <li>Moisturising</li>
+            </ul>
+            <p class="price">Starting at $25</p>
+            <a href="#booking" class="btn btn-primary">Book Now</a>
+          </div>
+          <div class="craft-card">
+            <div class="craft-icon"><i class="fa-solid fa-beard"></i></div>
+            <h3>Beard Trims</h3>
+            <ul>
+              <li>Beard Trim</li>
+              <li>Shape &amp; Style</li>
+              <li>Conditioning</li>
+            </ul>
+            <p class="price">Starting at $20</p>
+            <a href="#booking" class="btn btn-primary">Book Now</a>
+          </div>
+          <div class="craft-card">
+            <div class="craft-icon"><i class="fa-solid fa-crown"></i></div>
+            <h3>The Full Experience</h3>
+            <ul>
+              <li>Cut &amp; Style</li>
+              <li>Hot Towel Shave</li>
+              <li>VIP Treatment</li>
+            </ul>
+            <p class="price">Starting at $65</p>
+            <a href="#booking" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- History section -->
+    <section id="history" class="history section-padding">
+      <div class="history container">
+        <div class="history-image">
+          <img src="https://source.unsplash.com/600x600/?barbershop,history" alt="Our Story">
+        </div>
+        <div class="history-text">
+          <h2>Our Rich History</h2>
+          <p>Spirit Barber delivers precision, consistency and quality with every cut. Founded by a master barber with decades of experience, our shop is built on skill and dedication to client satisfaction. After years of honing the craft, the opportunity aligned to launch Spirit Barber.</p>
+          <p>Clients appreciate the attention to detail, personalised service and reliability that keep them coming back. Whether you need a sharp fade, a classic cut or a style tailored to you, Spirit Barber gets it right every time.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials section -->
+    <section id="testimonials" class="testimonials section-padding">
+      <div class="container">
+        <h2>Client Experiences</h2>
+        <div class="testimonial-slider">
+          <div class="testimonial active">
+            <p>“I've had fantastic haircuts at Spirit Barber. The team understands exactly what I want, and I always leave feeling fresh and confident.”</p>
+            <h4>&mdash; Mark Thompson</h4>
+          </div>
+          <div class="testimonial">
+            <p>“As soon as you walk in, you're transported to a different era. The vibe, the music, the drinks—it's an experience like no other.”</p>
+            <h4>&mdash; Diane &amp; Mark</h4>
+          </div>
+          <div class="testimonial">
+            <p>“The attention to detail is unmatched. They really take the time to listen to what you're looking for and deliver perfection every time.”</p>
+            <h4>&mdash; Jason Lee</h4>
+          </div>
+        </div>
+        <!-- Testimonial controls -->
+        <button class="testi-btn prev" aria-label="Previous testimonial">&#8249;</button>
+        <button class="testi-btn next" aria-label="Next testimonial">&#8250;</button>
+      </div>
+    </section>
+
+    <!-- VIP section -->
+    <section id="vip" class="vip section-padding">
+      <div class="container">
+        <h2>VIP Club Benefits</h2>
+        <p>Join our exclusive underground community and enjoy premium perks that make every visit special.</p>
+        <div class="vip-benefits">
+          <div class="vip-item"><span class="vip-number">1</span><p>Priority Booking</p></div>
+          <div class="vip-item"><span class="vip-number">2</span><p>Exclusive Hours</p></div>
+          <div class="vip-item"><span class="vip-number">3</span><p>Member Discounts</p></div>
+          <div class="vip-item"><span class="vip-number">4</span><p>Special Events</p></div>
+        </div>
+        <a href="#booking" class="btn btn-primary">Join VIP Club</a>
+      </div>
+    </section>
+
+    <!-- Gallery section -->
+    <section id="gallery" class="gallery section-padding">
+      <div class="container">
+        <h2>Hairstyle Gallery</h2>
+        <p>Explore our diverse gallery showcasing stylish haircuts and shapes. Stay inspired and find your next look.</p>
+        <div class="gallery-grid">
+          <img src="https://source.unsplash.com/400x400/?haircut,style" alt="Gallery 1">
+          <img src="https://source.unsplash.com/400x400/?barber,fade" alt="Gallery 2">
+          <img src="https://source.unsplash.com/400x400/?barber,shave" alt="Gallery 3">
+          <img src="https://source.unsplash.com/400x400/?men,haircut" alt="Gallery 4">
+          <img src="https://source.unsplash.com/400x400/?hairstyle,modern" alt="Gallery 5">
+          <img src="https://source.unsplash.com/400x400/?hair,barber" alt="Gallery 6">
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact / map section -->
+    <section id="contact" class="contact section-padding">
+      <div class="container">
+        <h2>Find Us at Spirit Barber</h2>
+        <p>At Spirit Barber, we’re easy to find. Our barbershop offers a welcoming atmosphere where you can enjoy top‑notch grooming services. Stop by to discuss your next haircut, or just swing by to say hello. We’re here to help you look your best.</p>
+      </div>
+      <div class="map-container">
+        <!-- Embedded Google Map focusing on Ann Arbor. Users can update to their actual location. -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2949.947444507402!2d-83.45211!3d42.2817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883cb0b880fd2351%3A0x4a5ec9ed58a9179!2sAnn%20Arbor%2C%20MI%2048105%2C%20USA!5e0!3m2!1sen!2sus!4v1690928570621!5m2!1sen!2sus" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+
+    <!-- Booking section with embedded Calendly and contact options -->
+    <section id="booking" class="booking section-padding">
+      <div class="container">
+        <h2>The Experience Awaits</h2>
+        <p>Schedule your appointment with Master Barber Faye Johnson and experience Ann Arbor's underground barbershop.</p>
+        <div class="booking-grid">
+          <div class="booking-info">
+            <h3>Easy Online Booking</h3>
+            <ul class="booking-steps">
+              <li><i class="fa-solid fa-calendar-check"></i> Select Your Service</li>
+              <li><i class="fa-solid fa-clock"></i> Pick Your Time</li>
+              <li><i class="fa-solid fa-users"></i> Family‑Friendly</li>
+            </ul>
+            <p>Prefer to call or text?</p>
+            <div class="contact-actions">
+              <a href="tel:+17342529596" class="btn contact-call"><i class="fa-solid fa-phone"></i> Call (734) 252‑9596</a>
+              <a href="sms:+17342529596" class="btn contact-text"><i class="fa-solid fa-message"></i> Text Us</a>
+            </div>
+          </div>
+          <div class="booking-widget">
+            <!-- Calendly inline widget embed -->
+            <!-- The embed below loads Calendly's scheduling widget directly into the page. -->
+            <div class="calendly-inline-widget" data-url="https://calendly.com/spiritbarber704/30min" style="min-width:320px;height:700px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            <p class="widget-note">Having trouble with the widget? <a href="https://calendly.com/spiritbarber704/30min" target="_blank" rel="noopener">Click here to book directly</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Back to top button -->
+  <button class="to-top" aria-label="Back to top">↑</button>
+
+  <!-- Site footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> Spirit Barber. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript file -->
+  <script src="script.js"></script>
+
+  <!-- Calendly badge widget for persistent scheduling access -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <script type="text/javascript">
+    // Initialise Calendly floating badge once the page has fully loaded. This
+    // provides users with a persistent call‑to‑action without interrupting
+    // their browsing experience.
+    window.addEventListener('load', function () {
+      if (typeof Calendly !== 'undefined' && Calendly.initBadgeWidget) {
+        Calendly.initBadgeWidget({
+          url: 'https://calendly.com/spiritbarber704/30min',
+          text: 'Schedule time with me',
+          color: '#0069ff',
+          textColor: '#ffffff',
+          branding: true
+        });
+      }
+    });
+  </script>
+</body>
+</html>

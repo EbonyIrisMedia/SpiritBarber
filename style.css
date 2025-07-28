@@ -1,0 +1,777 @@
+/*
+ * Global styling for the Spirit Barber website.
+ * The design borrows inspiration from modern barbershops: clean typography,
+ * generous white space and a limited colour palette anchored by deep blues and
+ * soft greys. Feel free to adjust the variables below to customise the look.
+ */
+
+/* Colour palette */
+:root {
+  --primary: #4361ee;       /* vibrant blue used for accents */
+  --primary-dark: #3546b4;  /* deeper shade for hover states */
+  --secondary: #f5f7fa;     /* light grey background for sections */
+  --text-dark: #172b4d;     /* dark navy for headings and body text */
+  --text-light: #ffffff;    /* white text on dark backgrounds */
+  --testimonial-bg: #1f2937;/* dark background for testimonials */
+  --shadow-color: rgba(0, 0, 0, 0.08);
+  --border-radius: 6px;
+}
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--border-radius);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Container utility for consistent horizontal padding */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background: var(--primary-dark);
+}
+
+/* Header & navigation */
+header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #ffffff;
+  box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+nav .logo a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+nav .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+nav .nav-links li a {
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+nav .nav-links li a:hover,
+nav .nav-links li a:focus {
+  color: var(--primary);
+}
+
+nav .hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 0.35rem;
+  cursor: pointer;
+}
+
+nav .hamburger span {
+  width: 25px;
+  height: 3px;
+  background: var(--text-dark);
+  transition: transform 0.3s ease;
+}
+
+/* Hero slider */
+.hero {
+  position: relative;
+  height: 80vh;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+.hero .slides {
+  position: relative;
+  height: 100%;
+}
+
+.hero .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.hero .slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.hero .hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  color: #fff;
+  text-align: left;
+}
+
+.hero .hero-content h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero .hero-content p {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+  color: #e8eaf6;
+}
+
+.hero .slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transition: background 0.3s ease;
+}
+
+.hero .slider-btn:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero .slider-btn.prev {
+  left: 2%;
+}
+.hero .slider-btn.next {
+  right: 2%;
+}
+
+.hero .dots {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+}
+
+.hero .dots .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.hero .dots .dot.active {
+  background: #fff;
+}
+
+/* Section padding */
+.section-padding {
+  padding: 4rem 0;
+  background: #fff;
+}
+
+/* Services */
+.services {
+  background: var(--secondary);
+}
+
+.service {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.service-text {
+  flex: 1 1 50%;
+}
+
+.service-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.service-text p {
+  margin-bottom: 1rem;
+}
+
+.service-image {
+  flex: 1 1 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* History */
+.history {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.history-image,
+.history-text {
+  flex: 1 1 50%;
+}
+
+.history-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Testimonials */
+.testimonials {
+  background: var(--testimonial-bg);
+  color: var(--text-light);
+  position: relative;
+}
+
+.testimonials h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.testimonial-slider {
+  position: relative;
+  overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.testimonial {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.testimonial.active {
+  opacity: 1;
+  position: relative;
+}
+
+.testimonial p {
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #d1d5db;
+}
+
+.testimonial h4 {
+  font-weight: 600;
+  color: #fff;
+}
+
+.testi-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.testi-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.testi-btn.prev { left: 5%; }
+.testi-btn.next { right: 5%; }
+
+/* VIP */
+.vip {
+  background: var(--secondary);
+  text-align: center;
+}
+
+.vip h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.vip p {
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+}
+
+.vip-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.vip-form input[type="email"] {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  flex: 0 0 300px;
+  max-width: 100%;
+}
+
+.vip-form button {
+  flex: 0 0 auto;
+}
+
+.vip small {
+  color: #666;
+}
+
+/* Gallery */
+.gallery {
+  background: #fff;
+  text-align: center;
+}
+
+.gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.gallery p {
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-grid img {
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+/* Contact */
+.contact {
+  background: var(--secondary);
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact p {
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+}
+
+.map-container {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  border: 0;
+  width: 100%;
+  height: 100%;
+  filter: grayscale(20%) contrast(1.2) opacity(0.9);
+}
+
+/* ====================
+ * Craft Section
+ *
+ * This section highlights individual service offerings with icons, lists
+ * of included treatments and a clear call‑to‑action. Cards use a light
+ * background with subtle shadows to stand out against the page.
+ */
+.craft {
+  background: var(--secondary);
+  text-align: center;
+}
+
+.craft h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.craft p {
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+}
+
+.craft-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.craft-card {
+  background: #fff;
+  border-radius: var(--border-radius);
+  padding: 2rem 1.5rem;
+  box-shadow: 0 2px 6px var(--shadow-color);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.craft-icon {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.craft-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.craft-card ul {
+  margin-bottom: 1rem;
+}
+
+.craft-card ul li {
+  margin-bottom: 0.35rem;
+}
+
+.craft-card .price {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* ====================
+ * VIP Benefits
+ *
+ * Replaces the old email sign‑up with a display of exclusive perks for
+ * membership. Utilises numbered badges to draw the eye and emphasise
+ * special treatment.
+ */
+.vip-benefits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.vip-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 160px;
+}
+
+.vip-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary);
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.vip-item p {
+  font-weight: 500;
+}
+
+/* ====================
+ * Booking Section
+ *
+ * Provides an easy way to schedule appointments via an embedded Calendly
+ * widget while offering convenient call and text options. The layout is
+ * responsive, with clear bullet points guiding users through the process.
+ */
+.booking {
+  background: #fff;
+  text-align: center;
+}
+
+.booking h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.booking p {
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+}
+
+.booking-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.booking-info {
+  text-align: left;
+}
+
+.booking-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.booking-steps {
+  margin-bottom: 1rem;
+}
+
+.booking-steps li {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.booking-steps i {
+  color: var(--primary);
+  margin-right: 0.5rem;
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.contact-call,
+.contact-text {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.3s ease;
+  font-weight: 600;
+}
+
+.contact-call:hover,
+.contact-text:hover {
+  background: var(--primary-dark);
+}
+
+.booking-widget {
+  width: 100%;
+}
+
+/* When using Calendly's inline widget via a div, apply similar styling */
+.booking-widget .calendly-inline-widget {
+  width: 100% !important;
+  height: 700px !important;
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 6px var(--shadow-color);
+  overflow: hidden;
+}
+
+/* Retain styling for iframe if used */
+.booking-widget iframe {
+  width: 100%;
+  height: 630px;
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 6px var(--shadow-color);
+}
+
+.widget-note {
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+/* Hero video specific styling */
+.video-slide .hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-slide .overlay {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* Back to top button */
+.to-top {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  width: 48px;
+  height: 48px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Footer */
+footer {
+  background: #f8f8f8;
+  padding: 1rem 0;
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  nav .nav-links {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: #ffffff;
+    width: 60%;
+    height: calc(100vh - 70px);
+    padding: 2rem 1.5rem;
+    box-shadow: -2px 0 4px var(--shadow-color);
+    transition: right 0.3s ease;
+  }
+
+  nav .nav-links.open {
+    right: 0;
+  }
+
+  nav .hamburger {
+    display: flex;
+  }
+
+  nav .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  nav .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  nav .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .service,
+  .history {
+    flex-direction: column;
+    text-align: center;
+  }
+  .service-image,
+  .history-image {
+    order: -1;
+  }
+  .vip-form {
+    flex-direction: column;
+  }
+}
